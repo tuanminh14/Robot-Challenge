@@ -1,9 +1,5 @@
-import { App } from "../app";
+import { App } from "../src/app";
 import { jest } from "@jest/globals";
-// import mockConsole from "jest-mock-console";
-import { readline } from "../__mocks__/readline";
-// import * as readline from "node:readline";
-// jest.mock("../readline.js");
 
 describe("test App functions", () => {
   const app = new App();

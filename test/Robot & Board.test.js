@@ -1,5 +1,5 @@
-import { Robot } from "../robot";
-import { Board } from "../board";
+import { Robot } from "../src/robot";
+import { Board } from "../src/board";
 
 describe("Testing robot's functions", () => {
   const robot1 = new Robot(5, 5, "west");
