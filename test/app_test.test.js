@@ -67,10 +67,4 @@ describe("test App functions", () => {
     app.reporting("report");
     expect(consoleSpy).toHaveBeenCalledTimes(1);
   });
-  test("test readline", () => {
-    // jest.mock("../readline.js");
-    app.placeRobot = jest.spyOn(app, "placeRobot");
-    app.takingCommand();
-    expect(app.placeRobot).toHaveBeenCalledTimes(1);
-  });
 });
