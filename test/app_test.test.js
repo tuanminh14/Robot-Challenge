@@ -11,8 +11,8 @@ describe("test App functions", () => {
   test("A new robot should be created and registered to robot array", () => {
     app.creatRobot(), expect(app.robots[0]).not.toBe(undefined);
     expect(app.robots).toContainEqual({
-      currentX: 0,
-      currentY: 0,
+      currentX: undefined,
+      currentY: undefined,
       currentDirection: undefined,
       isPlaced: false,
       name: undefined,
@@ -31,14 +31,14 @@ describe("test App functions", () => {
     expect(app.activeRobot.name).toBe("Robot 1");
   });
 
-  test("a board with 5 x 5 should be called", () => {
+  test("A board with 5 x 5 should be called", () => {
     app.creatBoard();
     expect(app.board).not.toBe(undefined);
     expect(app.board.width).toBe(5);
     expect(app.board.height).toBe(5);
   });
 
-  test("a place command should have its first part follow the format", () => {
+  test("A place command should have its first part follow the format", () => {
     expect(app.placeCommandVal("place ")).toBe(true);
     expect(app.placeCommandVal("place")).toBe(false);
     expect(app.placeCommandVal("move")).toBe(false);
@@ -61,7 +61,7 @@ describe("test App functions", () => {
       expect(app.robots[0].currentDirection).toBe("north");
   });
 
-  test("console.log in reporting function is called", () => {
+  test("Console.log in reporting function is called", () => {
     consoleSpy.mockClear();
     app.activeRobot = app.robots[0];
     app.reporting("report");

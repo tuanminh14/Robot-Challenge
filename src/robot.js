@@ -1,5 +1,5 @@
 export class Robot {
-  constructor(x = 0, y = 0, direction, name) {
+  constructor(x , y, direction, name) {
     this.currentX = x;
     this.currentY = y;
     this.currentDirection = direction;

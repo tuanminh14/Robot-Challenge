@@ -1,7 +1,12 @@
 import { Robot } from "../src/robot";
 import { Board } from "../src/board";
+import { jest } from "@jest/globals";
 
 describe("Testing robot's functions", () => {
+  const consoleSpy = jest
+    .spyOn(global.console, "log")
+    .mockImplementation(() => true);
+
   const robot1 = new Robot(5, 5, "west");
   const board1 = new Board(5, 5);
   test("Robot should take in the given inputs", () => {
