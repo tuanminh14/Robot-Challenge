@@ -15,7 +15,7 @@ Please have Node.js installed.
 
 After Node is installed, you can run the application VSCode terminal with:
 
-node <javascriptfile>
+node javascriptfilename
 
 Please download jest for the test suite to be run. You can run the test suite in the VSC terminal with:
 
