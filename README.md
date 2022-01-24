@@ -23,7 +23,7 @@ npm run test
 
 ## Design decisions and testing
 
-The application is developed in Object-oriented format. As the exention part has been completed, "report" command will shows the active robot's location, numbers of robot on the board, and which robot is active.
+The application is developed in Object-oriented format. As the exention part has been completed, "report" command will show the active robot's location, numbers of robot on the board, and which robot is active.
 
 Board details are set default to 5x5, but if we have further extension to include multiple boards, the application can be extended.
 
