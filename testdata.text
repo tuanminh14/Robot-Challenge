@@ -55,3 +55,19 @@ Move
 Robot 2
 Left
 Report
+
+Test case 5
+Right
+Left
+Move
+Robot
+Place 3,4,north
+Place 5,2,west
+Robot 2
+Move
+Move
+Report
+Place 4,5,east
+Place 3,2,rest
+Place 2,3,south
+report
