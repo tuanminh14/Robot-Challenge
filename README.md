@@ -28,3 +28,7 @@ The application is developed in Object-oriented format. As the exention part has
 Board details are set default to 5x5, but if we have further extension to include multiple boards, the application can be extended.
 
 I have used jest to write unit tests on the methods.
+
+## Fixing Bug
+
+A new update has been made to fix a bug. 4 should be the maximum number that Robot can move to as Robot starts at 0. The fix is to make Robot not to be moved or placed at 5 or larger number.
