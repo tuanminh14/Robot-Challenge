@@ -42,7 +42,7 @@ export class Robot {
         switch (this.currentDirection) {
           case "north":
             this.currentY += 1;
-            if ((this.currentY = this.board.height)) {
+            if ((this.currentY === this.board.height)) {
               this.currentY -= 1;
               console.log(
                 "Cant move the robot out of the board. Please try again"
@@ -67,7 +67,7 @@ export class Robot {
         switch (this.currentDirection) {
           case "east":
             this.currentX += 1;
-            if ((this.currentX = this.board.width)) {
+            if ((this.currentX === this.board.width)) {
               this.currentX -= 1;
               console.log(
                 "Cant move the robot out of the board. Please try again"

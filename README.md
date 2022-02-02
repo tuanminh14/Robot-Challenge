@@ -29,9 +29,9 @@ Board details are set default to 5x5, but if we have further extension to includ
 
 I have used jest to write unit tests on the methods.
 
-## Fixing Bug
+## New Update
 
-A new update has been made to fix a bug. 4 should be the maximum number that Robot can move to as Robot starts at 0. The fix is to make Robot not to be moved or placed at 5 or larger number.
+A new update (v1.1) has been made to fix a bug. 4 should be the maximum number that Robot can move to as Robot starts at 0. The fix is to make Robot not to be moved or placed at 5 or larger number.
 
 ## Robot Visual Display
 
