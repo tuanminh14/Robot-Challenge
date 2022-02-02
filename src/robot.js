@@ -1,5 +1,5 @@
 export class Robot {
-  constructor(x , y, direction, name) {
+  constructor(x, y, direction, name) {
     this.currentX = x;
     this.currentY = y;
     this.currentDirection = direction;
@@ -14,11 +14,11 @@ export class Robot {
 
   moveRobot(command) {
     if (command === "move" && this.isPlaced) {
-      if (this.currentY >= 0 && this.currentY <= this.board.height) {
+      if (this.currentY >= 0 && this.currentY < this.board.height) {
         switch (this.currentDirection) {
           case "north":
             this.currentY += 1;
-            if (this.currentY > this.board.height) {
+            if ((this.currentY = this.board.height)) {
               this.currentY -= 1;
               console.log(
                 "Cant move the robot out of the board. Please try again"
@@ -37,11 +37,11 @@ export class Robot {
         }
       }
 
-      if (this.currentX >= 0 && this.currentX <= this.board.width) {
+      if (this.currentX >= 0 && this.currentX < this.board.width) {
         switch (this.currentDirection) {
           case "east":
             this.currentX += 1;
-            if (this.currentX > this.board.width) {
+            if ((this.currentX = this.board.width)) {
               this.currentX -= 1;
               console.log(
                 "Cant move the robot out of the board. Please try again"

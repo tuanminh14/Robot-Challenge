@@ -18,7 +18,7 @@ export class App {
 
   // Default active Robot or render Robot active
   makeRobotActive(command) {
-    if (!this?.activeRobot && !command.includes("robot"))
+    if (!this.activeRobot && !command.includes("robot"))
       this.activeRobot = this.robots[0];
     if (command.includes("robot")) {
       const [_, robotNumber] = command.split(" ");
@@ -58,7 +58,7 @@ export class App {
       console.log("please follow this format place x,y,direction");
       return false;
     }
-    if (x < 0 || x > this.board.width || y < 0 || y > this.board.height) {
+    if (x < 0 || x >= this.board.width || y < 0 || y >= this.board.height) {
       console.log("Cant place Robot outside board");
       return false;
     }
@@ -79,7 +79,7 @@ export class App {
       const [x, y, direction] = comm2.split(",");
 
       //Board is created if command includes place and there is no board created before
-      if (!this?.board) this.creatBoard();
+      if (!this.board) this.creatBoard();
 
       //Create a new robot and allocate inputs to Robot if validation works
       if (this.placeInputValidation(comm, x, y, direction)) {
