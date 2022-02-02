@@ -7,11 +7,11 @@ describe("Testing robot's functions", () => {
     .spyOn(global.console, "log")
     .mockImplementation(() => true);
 
-  const robot1 = new Robot(5, 5, "west");
+  const robot1 = new Robot(4, 4, "west");
   const board1 = new Board(5, 5);
   test("Robot should take in the given inputs", () => {
-    expect(robot1.currentX).toBe(5);
-    expect(robot1.currentY).toBe(5);
+    expect(robot1.currentX).toBe(4);
+    expect(robot1.currentY).toBe(4);
     expect(robot1.currentDirection).toBe("west");
     expect(robot1.isPlaced).toBeFalsy();
   }),
@@ -30,11 +30,11 @@ describe("Testing robot's functions", () => {
     });
   test("Robot should move 1 unit with the 'move' command, and should ignore the incorrect command ", () => {
     robot1.moveRobot("move");
-    expect(robot1.currentX).toBe(4);
-    expect(robot1.currentY).toBe(5);
+    expect(robot1.currentX).toBe(3);
+    expect(robot1.currentY).toBe(4);
     robot1.moveRobot("left");
-    expect(robot1.currentX).toBe(4);
-    expect(robot1.currentY).toBe(5);
+    expect(robot1.currentX).toBe(3);
+    expect(robot1.currentY).toBe(4);
   }),
     test("Robot should not move out of table", () => {
       robot1.currentX = 0;
@@ -45,12 +45,17 @@ describe("Testing robot's functions", () => {
       robot1.currentDirection = "south";
       expect(robot1.currentY).toBe(0);
 
-      robot1.currentX = 5;
-      robot1.currentY = 5;
+      robot1.currentX = 4;
+      robot1.currentY = 4;
       robot1.currentDirection = "east";
-      expect(robot1.currentX).toBe(5);
+      consoleSpy.mockClear();
+      robot1.moveRobot("move");
+      expect(robot1.currentX).toBe(4);
+      expect(consoleSpy).toHaveBeenCalledTimes(1);
       robot1.currentDirection = "north";
-      expect(robot1.currentY).toBe(5);
+      robot1.moveRobot("move");
+      expect(robot1.currentY).toBe(4);
+      expect(consoleSpy).toHaveBeenCalledTimes(2);
     });
 });
 
