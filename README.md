@@ -32,3 +32,9 @@ I have used jest to write unit tests on the methods.
 ## Fixing Bug
 
 A new update has been made to fix a bug. 4 should be the maximum number that Robot can move to as Robot starts at 0. The fix is to make Robot not to be moved or placed at 5 or larger number.
+
+## Robot Visual Display
+
+A new trial of diplaying Robot visually has been made. Robot in this trial version is represented by a triangle. Commands are put in textbox and actioned once the enter button is hit. Board will appear once the command contain place even it is not in the correct format.
+More updates and fixes on this version will be released in the future.
+Please go to src(visual) to try out the trial.
