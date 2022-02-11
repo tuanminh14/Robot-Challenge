@@ -14,7 +14,8 @@ Left
 Robot 2
 Report
 
-
+Output (1st report): 1, 4, South; number of robots on board: 1; active robot: Robot1
+Output (2nd report): 3, 4, West; number of robots on board: 2; active robot: Robot2
 
 Test data 2
 
@@ -32,6 +33,9 @@ Place 3,5,south
 place 3,4,chicken
 report
 
+Output (1st report): 3, 4, West; number of robots on board: 1; active robot: Robot1
+Output (2nd report): 2, 4, West; number of robots on board: 1; active robot: Robot1
+
 Test data 3
 
 PLACE 1,2,EAST
@@ -41,6 +45,8 @@ LEFT
 MOVE
 REPORT
 
+Output: 3, 3, North; number of robots on board: 1; active robot: Robot1
+
 Test data 4
 
 Place 3,4,east
@@ -48,13 +54,16 @@ Left
 Left
 Move
 Place 3,5,south
-Place 4,5,west
+Place 4,4,west
 Robot 3
 Move
 Move
 Robot 2
 Left
 Report
+
+Output: 4,4, south; number of robots on board: 2; active robot: Robot2
+
 
 Test case 5
 Right
@@ -71,3 +80,6 @@ Place 4,5,east
 Place 3,2,rest
 Place 2,3,south
 report
+
+Output (1st): 3, 4, north; number of robots on board: 1; active robot: Robot1
+Output(2nd): 3, 4, north; number of robots on board: 2; active robot: Robot1
